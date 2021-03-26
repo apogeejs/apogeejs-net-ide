@@ -11,8 +11,7 @@
     "core-js": "~3.6.5"
   },
   "author": "Dave Sutter",
-  "preferGlobal": true,
   "bin": {
-    "apogeejs-net-ide": "./src/electron-cli.js"
+    "apogeejs-net-ide": "./electron-cli.js"
   }
 }

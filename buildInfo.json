@@ -1,11 +1,11 @@
 {
-    "repoName": "apogeejs-electron-web",
+    "repoName": "apogeejs-net-ide",
 
     "npmModule": {
         "taskList": [
             {
                 "type": "copyAndReplace",
-                "srcFileUrl": "/apogeejs-electron-web/package.json",
+                "srcFileUrl": "/apogeejs-net-ide/package.json",
                 "replacementList": [
                     {
                         "marker": "[RELEASE_VERSION]",
@@ -41,13 +41,19 @@
                     "/apogeejs-app-bundle/src/debugHook.js",
                     "/apogeejs-app-bundle/src/webGlobals.js",
                     "/apogeejs-app-bundle/src/apogeeAppBundle.js",
-                    "/apogeejs-electron-web/src/**/*"
+                    "/apogeejs-net-ide/src/**/*"
                 ],
                 "childFolder": "src"
             },
             {
+                "type": "copyFileList",
+                "srcFileUrlList": [
+                    "/apogeejs-net-ide/electron-cli.js"
+                ]
+            },
+            {
                 "type": "copyAndReplace",
-                "srcFileUrl": "/apogeejs-electron-web/web/apogee.html",
+                "srcFileUrl": "/apogeejs-net-ide/web/apogee.html",
                 "replacementList": [
                     {
                         "marker": "[RELEASE_VERSION]",
