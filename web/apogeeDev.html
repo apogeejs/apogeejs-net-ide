@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Apogee</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <base href="http://localhost:8888" target="_blank">
+    
+        <script type="text/javascript" src="/apogeejs-model-lib/src/webGlobals.js"></script>
+        <script type="text/javascript" src="/apogeejs-model-lib/src/debugHook.js"></script>
+        <script type="module" src="/apogeejs-app-bundle/src/apogeeAppBundle.js"></script>
+        <script type="text/javascript">
+            const includeBasePathInfo = {
+                "resources": {
+                    "defaultResourcePath": "/apogeejs-app-bundle/resources",
+                    "domainMap": {
+                        "ui-lib": "/apogeejs-ui-lib/resources",
+                        "app": "/apogeejs-app-bundle/resources",
+                        "combined-file-access": "/apogeejs-combined-file-access/resources"
+                    }
+                },
+                "aceIncludes": "/apogeejs-admin/ext/ace/ace_1.4.3/ace_includes"
+            };
+
+            const __apogee_version__ = "0.0.0 (unreleased)";
+            const __browser__ = true;
+
+            function beforeUnloadHandler() {
+                if(getWorkspaceIsDirty()) {
+                    return "There is unsaved data. Exit?";
+                }
+                else {
+                    return undefined;
+                }
+            }
+        </script>
+        <script type="module">
+            import CombinedFileAccessAppConfigManager from "/apogeejs-combined-file-access/src/CombinedFileAccessAppConfigManager.js"
+            //create an instance of the app config manager and make it available to this page.
+            __globals__.appConfigManager = new CombinedFileAccessAppConfigManager();
+        </script>
+
+        <link rel="stylesheet" type="text/css" href="/prosemirror-admin/compiledCss/editor.css">
+        <link rel="stylesheet" type="text/css" href="/apogeejs-view-lib/style/apogeeapp.css">
+        <link rel="stylesheet" type="text/css" href="/apogeejs-view-lib/style/ComponentDisplay.css">
+        <link rel="stylesheet" type="text/css" href="/apogeejs-app-bundle/style/LiteratePage.css">
+        <link rel="stylesheet" type="text/css" href="/apogeejs-app-bundle/style/ApogeeToolbar.css">
+        <link rel="stylesheet" type="text/css" href="/apogeejs-ui-lib/style/dialog.css">
+        <link rel="stylesheet" type="text/css" href="/apogeejs-ui-lib/style/DisplayAndHeader.css">
+        <link rel="stylesheet" type="text/css" href="/apogeejs-ui-lib/style/Menu.css">
+        <link rel="stylesheet" type="text/css" href="/apogeejs-ui-lib/style/SplitPane.css">
+        <link rel="stylesheet" type="text/css" href="/apogeejs-ui-lib/style/TabFrame.css">
+        <link rel="stylesheet" type="text/css" href="/apogeejs-ui-lib/style/tooltip.css">
+        <link rel="stylesheet" type="text/css" href="/apogeejs-ui-lib/style/TreeControl.css">
+        <link rel="stylesheet" type="text/css" href="/apogeejs-ui-lib/style/ConfigurablePanel.css">     
+        <link rel="stylesheet" type="text/css" href="/apogeejs-ui-lib/style/ListElement.css">
+        <link rel="stylesheet" type="text/css" href="/apogeejs-combined-file-access/style/combinedFileAccess.css">
+        <link rel="stylesheet" type="text/css" href="/apogeejs-admin/ext/handsontable/handsontable_6.2.0/handsontable.full.min.css">
+        
+	</head>
+    <body onload="appInit(appConfigManager,includeBasePathInfo)" onbeforeunload="return beforeUnloadHandler()">
+        <div id="appContainer"></div>
+	</body>
+</html>

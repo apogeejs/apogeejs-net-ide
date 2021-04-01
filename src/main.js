@@ -25,7 +25,7 @@ function createWindow () {
 
     // and load the index.html of the app.
     win.loadURL(url.format({
-        pathname: path.join(__dirname, '../web/apogee.html'),
+        pathname: path.join(__dirname, '../web/apogeeDev.html'),
         protocol: 'file:',
         slashes: true
     }))  

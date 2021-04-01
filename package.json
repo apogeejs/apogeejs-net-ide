@@ -1,6 +1,6 @@
 {
   "name": "apogeejs-net-ide",
-  "version": "[RELEASE_VERSION]",
+  "version": "0.0.0-debug",
   "description": "Electron version of ApogeeJS app",
   "main": "./src/main.js",
   "scripts": {
