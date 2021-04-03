@@ -1,8 +1,6 @@
 {
     "version": "2.0.0-p1",
     "isProductionRelease": false,
-    "buildInfoUrl": "/apogeejs-net-ide/buildInfo.json", 
-    "dependentVersions": {
-        "apogeejs-app-bundle": {"version": "2.0.0-p1", "isProductionRelease": false}
-    }
+    "suppressReleasePresentCheck": true,
+    "buildInfoUrl": "/apogeejs-net-ide/buildInfo.json"
 }

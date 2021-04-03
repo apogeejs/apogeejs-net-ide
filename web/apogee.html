@@ -4,12 +4,12 @@
 		<title>Apogee</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<script type="text/javascript" src="../src/webGlobals.js"></script>
-        <script type="text/javascript" src="../src/debugHook.js"></script>
-        <script type="module" src="../src/apogeeAppBundle.js"></script>
+		<script type="text/javascript" src="../apogeejs-app-bundle/src/webGlobals.js"></script>
+        <script type="text/javascript" src="../apogeejs-app-bundle/src/debugHook.js"></script>
+        <script type="module" src="../apogeejs-app-bundle/src/apogeeAppBundle.js"></script>
         <script type="text/javascript">
             const includeBasePathInfo = {
-                "resources": "../resources",
+                "resources": "../apogeejs-app-bundle/resources",
                 "aceIncludes": "../ace_includes"
             };
 
@@ -21,7 +21,7 @@
             //create an instance of the app config manager and make it available to this page.
             __globals__.appConfigManager = new ElectronBridgeAppConfigManager();
         </script>
-        <link rel="stylesheet" type="text/css" href="../style/apogeeAppBundle.css">
+        <link rel="stylesheet" type="text/css" href="../apogeejs-app-bundle/style/apogeeAppBundle.css">
 	</head>
     <body onload="appInit(appConfigManager,includeBasePathInfo)">
         <div id="appContainer"></div>
