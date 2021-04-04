@@ -33,6 +33,13 @@
         {
             "type": "copyFileList",
             "srcFileUrlList": [
+                "/apogeejs-net-ide/src/**/*"
+            ],
+            "childFolder": "src"
+        },
+        {
+            "type": "copyFileList",
+            "srcFileUrlList": [
                 "/apogeejs-admin/ext/ace/ace_1.4.3/ace_includes/**/*"
             ],
             "childFolder": "ace_includes"
@@ -66,13 +73,6 @@
                 "/apogeejs-app-bundle/resources/**/*"
             ],
             "childFolder": "apogeejs-app-bundle/resources"
-        },
-        {
-            "type": "copyFileList",
-            "srcFileUrlList": [
-                "/apogeejs-net-ide/src/**/*"
-            ],
-            "childFolder": "src"
         },
         {
             "type": "copyFileList",
