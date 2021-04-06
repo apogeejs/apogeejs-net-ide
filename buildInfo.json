@@ -42,7 +42,7 @@
         {
             "type": "copyFileList",
             "srcFileUrlList": [
-                "/apogeejs-admin/ext/ace/ace_1.4.3/ace_includes/**/*"
+                "/apogeejs-releases/releases/ext/ace/v1.4.3/ace_includes/**/*"
             ],
             "childFolder": "ace_includes"
         },
@@ -53,7 +53,7 @@
                 "/apogeejs-app-bundle/style/**/*",
                 "/apogeejs-ui-lib/style/**/*",
                 "/prosemirror-admin/compiledCss/editor.css",    
-                "/apogeejs-admin/ext/handsontable/handsontable_6.2.0/handsontable.full.min.css"
+                "/apogeejs-releases/releases/ext/handsontable/v6.2.0/handsontable.full.min.css"
             ],
             "destFileName": "apogeeAppBundle.css",
             "childFolder": "apogeejs-app-bundle/style"
