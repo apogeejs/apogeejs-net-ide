@@ -17,9 +17,10 @@
             const __browser__ = false;
         </script>
         <script type="module">
-            import ElectronBridgeAppConfigManager from "../src/ElectronBridgeAppConfigManager.js"
-            //create an instance of the app config manager and make it available to this page.
-            __globals__.appConfigManager = new ElectronBridgeAppConfigManager();
+            import CombinedFileAccess from "/apogeejs-combined-file-access/src/CombinedFileAccess.js";
+            import SimpleModuleManager from "/apogeejs-simple-module-manager/src/SimpleModuleManager.js";
+            apogeeplatform.setFileAccessObject(new CombinedFileAccess());
+            apogeeplatform.setModuleManagerClass(SimpleModuleManager);
         </script>
         <link rel="stylesheet" type="text/css" href="../apogeejs-app-bundle/style/apogeeAppBundle.css">
 	</head>
