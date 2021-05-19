@@ -35,9 +35,9 @@
             }
         </script>
         <script type="module">
-            import CombinedFileAccess from "/apogeejs-combined-file-access/src/CombinedFileAccess.js";
+            import ElectronBridgeFileAccess from "/apogeejs-net-ide/src/ElectronBridgeFileAccess.js";
             import SimpleModuleManager from "/apogeejs-simple-module-manager/src/SimpleModuleManager.js";
-            apogeeplatform.setFileAccessObject(new CombinedFileAccess());
+            apogeeplatform.setFileAccessObject(new ElectronBridgeFileAccess());
             apogeeplatform.setModuleManagerClass(SimpleModuleManager);
         </script>
 
@@ -59,7 +59,7 @@
         <link rel="stylesheet" type="text/css" href="/apogeejs-releases/releases/ext/handsontable/v6.2.2/handsontable.full.min.css">
         
 	</head>
-    <body onload="appInit(appConfigManager,includeBasePathInfo)" onbeforeunload="return beforeUnloadHandler()">
+    <body onload="appInit(includeBasePathInfo)" onbeforeunload="return beforeUnloadHandler()">
         <div id="appContainer"></div>
 	</body>
 </html>

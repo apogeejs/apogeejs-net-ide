@@ -26,17 +26,17 @@ function createWindow () {
     // and load the index.html of the app.
 
     //this is for debugging, loading over the web
-    // win.loadURL(url.format({
-    //     pathname: path.join(__dirname, '../web/apogeeDev.html'),
-    //     protocol: 'file:',
-    //     slashes: true
-    // })) 
-    //this is for production
     win.loadURL(url.format({
-        pathname: path.join(__dirname, '../web/apogee.html'),
+        pathname: path.join(__dirname, '../web/apogeeDev.html'),
         protocol: 'file:',
         slashes: true
-    }))  
+    })) 
+    //this is for production
+    // win.loadURL(url.format({
+    //     pathname: path.join(__dirname, '../web/apogee.html'),
+    //     protocol: 'file:',
+    //     slashes: true
+    // }))  
     
   
     win.on('close',(e) => {
