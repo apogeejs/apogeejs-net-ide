@@ -15,13 +15,14 @@ function createWindow () {
             nodeIntegration: false,
             contextIsolation: true,
             enableRemoteModule: true,
+            nativeWindowOpen: true,
 			preload: path.join(__dirname, "preload.js")
         }
     })
     win.setMenu(null)
     
     // Open the DevTools.
-   win.webContents.openDevTools() 
+    win.webContents.openDevTools()
 
     // and load the index.html of the app.
 
