@@ -116,3 +116,19 @@ function createFileMetaData(path) {
 function createDisplayPath(fileMetadata) {
     return fileMetadata.path;
 }
+
+/** Open links API, accessed by external opener. */
+contextBridge.exposeInMainWorld('openLinksApi', {
+	spawnWorkspaceFromUrl: (workspaceUrl) => {
+        const {ipcRenderer} = require('electron');
+        let data = {
+            "workspaceUrl": workspaceUrl
+        }
+        ipcRenderer.send('request-open-workspace',data);
+    },
+
+    openWebLink: (url) => {
+            let shell = require("electron").shell;
+            shell.openExternal(url);
+    }
+})

@@ -19,8 +19,13 @@
         <script type="module">
             import CombinedFileAccess from "/apogeejs-combined-file-access/src/CombinedFileAccess.js";
             import SimpleModuleManager from "/apogeejs-simple-module-manager/src/SimpleModuleManager.js";
+            import NetIdeExternalOpener from "../src/NetIdeExternalOpener.js";
             apogeeplatform.setFileAccessObject(new CombinedFileAccess());
-            apogeeplatform.setModuleManagerClass(SimpleModuleManager);
+            const moduleManagerOptions = {
+                openLinkFromApp: true
+            }
+            apogeeplatform.setModuleManagerClass(SimpleModuleManager,moduleManagerOptions);
+            apogeeplatform.setExternalOpener(new NetIdeExternalOpener());
         </script>
         <link rel="stylesheet" type="text/css" href="../apogeejs-app-bundle/style/apogeeAppBundle.css">
 	</head>
